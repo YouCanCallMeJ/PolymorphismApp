@@ -17,9 +17,11 @@ namespace PolymorphismApp
             this.height = height;
         }
 
-        public double getAreaRectangle()
+        public override double getArea()
         {
             return width * height;
         }
+
+      
     }
 }

@@ -60,18 +60,7 @@ namespace PolymorphismApp
 
             foreach (Figure2D item in figures)
             {
-                if (item is Rectangle)
-                {
-                    Rectangle rect = (Rectangle)item;
-                    total += rect.getAreaRectangle();
-                }
-                else if (item is Circle)
-                {
-                    Circle circ = (Circle)item;
-                    total += circ.getAreaCircle();
-                }
-
-
+                total += item.getArea();
             }
 
             MessageBox.Show("total area: " + total.ToString());

@@ -16,9 +16,11 @@ namespace PolymorphismApp
             this.radius = radius;
         }
 
-        public double getAreaCircle()
+        public override double getArea()
         {
             return Math.PI * radius * radius;
         }
+
+        
     }
 }

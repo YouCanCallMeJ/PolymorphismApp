@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace PolymorphismApp
 {
-    class Figure2D
+    abstract class Figure2D
     {
+        public abstract double getArea();
+        
     }
 }
