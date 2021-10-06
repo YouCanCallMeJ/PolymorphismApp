@@ -43,6 +43,7 @@ namespace PolymorphismApp
             this.btnRectangle.TabIndex = 0;
             this.btnRectangle.Text = "Rectangle";
             this.btnRectangle.UseVisualStyleBackColor = true;
+            this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
             // 
             // btnCircle
             // 
@@ -52,6 +53,7 @@ namespace PolymorphismApp
             this.btnCircle.TabIndex = 0;
             this.btnCircle.Text = "Circle";
             this.btnCircle.UseVisualStyleBackColor = true;
+            this.btnCircle.Click += new System.EventHandler(this.btnCircle_Click);
             // 
             // btnShow
             // 
@@ -61,6 +63,7 @@ namespace PolymorphismApp
             this.btnShow.TabIndex = 0;
             this.btnShow.Text = "Show";
             this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnTriangle
             // 
@@ -70,6 +73,7 @@ namespace PolymorphismApp
             this.btnTriangle.TabIndex = 1;
             this.btnTriangle.Text = "Triangle (future feature)";
             this.btnTriangle.UseVisualStyleBackColor = true;
+            this.btnTriangle.Click += new System.EventHandler(this.btnTriangle_Click);
             // 
             // Form1
             // 
