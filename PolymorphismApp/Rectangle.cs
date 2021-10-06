@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PolymorphismApp
 {
-    class Rectangle
+    class Rectangle : Figure2D
     {
         private int width;
         private int height;

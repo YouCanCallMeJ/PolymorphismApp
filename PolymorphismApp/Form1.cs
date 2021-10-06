@@ -12,9 +12,10 @@ namespace PolymorphismApp
 {
     public partial class Form1 : Form
     {
-        private List<Rectangle> rectangles = new List<Rectangle>();
-        private List<Circle> circles = new List<Circle>();
-        //new list for triangle
+        private List<Figure2D> figures = new List<Figure2D>();
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -22,33 +23,34 @@ namespace PolymorphismApp
 
         private void btnRectangle_Click(object sender, EventArgs e)
         {
-            Rectangle r = new Rectangle(10, 20);
-            rectangles.Add(r);
+            Figure2D r = new Rectangle(10, 20);
+                       
+            figures.Add(r);
             r = new Rectangle(10, 20);
-            rectangles.Add(r);
+            figures.Add(r);
             r = new Rectangle(10, 20);
-            rectangles.Add(r);
+            figures.Add(r);
             r = new Rectangle(10, 20);
-            rectangles.Add(r);
+            figures.Add(r);
             r = new Rectangle(10, 20);
-            rectangles.Add(r);
+            figures.Add(r);
 
         }
 
         private void btnCircle_Click(object sender, EventArgs e)
         {
             Circle c = new Circle(5);
-            circles.Add(c);
+            figures.Add(c);
             c = new Circle(5);
-            circles.Add(c);
+            figures.Add(c);
             c = new Circle(5);
-            circles.Add(c);
+            figures.Add(c);
             c = new Circle(5);
-            circles.Add(c);
+            figures.Add(c);
             c = new Circle(5);
-            circles.Add(c);
+            figures.Add(c);
             c = new Circle(5);
-            circles.Add(c);
+            figures.Add(c);
 
         }
 
@@ -56,17 +58,21 @@ namespace PolymorphismApp
         {
             double total = 0;
 
-            foreach (Rectangle item in rectangles)
+            foreach (Figure2D item in figures)
             {
-                total += item.getAreaRectangle();
-            }
+                if (item is Rectangle)
+                {
+                    Rectangle rect = (Rectangle)item;
+                    total += rect.getAreaRectangle();
+                }
+                else if (item is Circle)
+                {
+                    Circle circ = (Circle)item;
+                    total += circ.getAreaCircle();
+                }
 
-            foreach (Circle item in circles)
-            {
-                total += item.getAreaCircle();
-            }
 
-            //another loop for triangle
+            }
 
             MessageBox.Show("total area: " + total.ToString());
 

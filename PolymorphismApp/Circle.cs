@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PolymorphismApp
 {
-    class Circle
+    class Circle : Figure2D
     {
         private int radius;
         
